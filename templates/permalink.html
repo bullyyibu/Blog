@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <a href="/blog" class="new-post">
+    返回首页
+  </a>
+  <br>
+  <p> 哇，这就是你刚才发的巨博: </p>
+  <br>
+  {{post.render() | safe}}
+{% endblock %}

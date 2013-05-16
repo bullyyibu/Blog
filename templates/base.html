@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <title>A fantastic Blog Site</title>
+  <script src="../js/closure-library/closure/goog/base.js"></script>
+  <script src="../js/notepad.js"></script>
+</head>
+
+<body> 
+  <a href="/blog" class="main-title">
+    欢迎使用巨博，这里可以发表140字以上的博文哦～～～
+  </a>
+  <br>
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+
+  <div id="notes">
+  </div>
+
+  <script>
+  function main() {
+      var noteData = [
+            {'title': 'note', 'content': 'gepao'},
+      ]
+      var noteListElement = document.getElementById('notes');
+      var notes = tutorial.notepad.makeNotes(noteData, noteListElement);
+  }
+  main();
+  </script>
+</body>
+
+</html>

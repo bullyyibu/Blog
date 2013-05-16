@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <a href="/blog/newpost" class="new-post">
+    点我可以去发表新巨博
+  </a>
+  <br>
+  <br>
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+{% endblock %}
